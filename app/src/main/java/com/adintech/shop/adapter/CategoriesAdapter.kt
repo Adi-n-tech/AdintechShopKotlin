@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.adintech.shop.DataObject
+import com.adintech.shop.model.category.pojo.Category
 import com.adintech.shop.R
 
-class CategoriesAdapter(val categoriesList: ArrayList<DataObject>) :
+class CategoriesAdapter(val categoriesList: ArrayList<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
     //this method is returning the view for each item in the list
@@ -35,7 +35,7 @@ class CategoriesAdapter(val categoriesList: ArrayList<DataObject>) :
     //the class is hodling the list view
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindItems(categories_list: DataObject) {
+        fun bindItems(categories_list: Category) {
             val categoriesName = itemView.findViewById(R.id.categoriesName) as TextView
             val categoriesIcon = itemView.findViewById(R.id.categoriesIcon) as ImageView
             categoriesName.text = categories_list.name
