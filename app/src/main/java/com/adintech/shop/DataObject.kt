@@ -1,5 +1,3 @@
 package com.adintech.shop
 
-class DataObject(s: String) {
-    lateinit var title: String
-}
+data class DataObject(val name: String, val icon: String)

@@ -1,15 +1,12 @@
 package com.adintech.shop
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.adintech.shop.databinding.ActivityMainBinding
-import com.denzcoskun.imageslider.ImageSlider
-import com.denzcoskun.imageslider.constants.ScaleTypes
-import com.denzcoskun.imageslider.models.SlideModel
+import com.adintech.shop.fragment.HomeFragment
+import com.adintech.shop.fragment.WishlistFragment
 import com.fxn.OnBubbleClickListener
 
 /**
