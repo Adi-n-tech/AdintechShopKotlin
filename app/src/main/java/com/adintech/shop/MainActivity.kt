@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.adintech.shop.databinding.ActivityMainBinding
 import com.adintech.shop.fragment.HomeFragment
+import com.adintech.shop.fragment.ProfileFragment
 import com.adintech.shop.fragment.WishlistFragment
 import com.fxn.OnBubbleClickListener
 

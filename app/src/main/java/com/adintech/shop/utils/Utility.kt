@@ -22,7 +22,6 @@ object Utility {
     fun Context.toast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
-
     /**
      * check is network connectivity is available or not.
      *

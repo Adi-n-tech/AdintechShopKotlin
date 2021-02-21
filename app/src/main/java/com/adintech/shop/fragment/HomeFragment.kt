@@ -16,10 +16,12 @@ import com.adintech.shop.databinding.FragmentHomeBinding
 import com.adintech.shop.model.category.pojo.Category
 import com.adintech.shop.utils.APIResponse
 import com.adintech.shop.utils.APIResponseHandler
+import com.adintech.shop.utils.AppConstant
+import com.adintech.shop.utils.Status
 import com.adintech.shop.viewmodel.HomeViewModel
+import com.practice.samplekotlinapp.utils.Utility.hide
+import com.practice.samplekotlinapp.utils.Utility.show
 
-
-@Suppress("UNREACHABLE_CODE")
 class HomeFragment : Fragment(), APIResponseHandler {
 
     lateinit var mBinding: FragmentHomeBinding
@@ -35,7 +37,7 @@ class HomeFragment : Fragment(), APIResponseHandler {
     }
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
@@ -50,18 +52,33 @@ class HomeFragment : Fragment(), APIResponseHandler {
 
     @SuppressLint("WrongConstant")
     fun initialise() {
+        //--------
+        mViewModel.apiResponseMutableLiveData!!.observe(this,
+            { apiResponse -> onAPIResponseHandler(apiResponse) })
+
         mBinding.recycleview.layoutManager =
-                LinearLayoutManager(context, LinearLayout.HORIZONTAL, false)
+            LinearLayoutManager(context, LinearLayout.HORIZONTAL, false)
 
         mViewModel.doGetCategoryList(1001)
     }
 
     override fun onAPIResponseHandler(apiResponse: APIResponse?) {
-        if (apiResponse?.requestID == 1001) {
-            mCategoriesList = apiResponse.data as ArrayList<Category>
+        when (apiResponse!!.status) {
+            Status.LOADING -> mBinding.progressBar.show()
+            Status.SUCCESS -> {
+                mBinding.progressBar.hide()
+                when (apiResponse!!.requestID) {
+                    AppConstant.API_REQUEST_1001 -> {
+                        mCategoriesList = apiResponse.data as ArrayList<Category>
 
-            if (mCategoriesList != null) {
-                setAdaptor()
+                        if (mCategoriesList != null) {
+                            setAdaptor()
+                        }
+                    }
+                }
+            }
+            Status.ERROR -> {
+                mBinding.progressBar.hide()
             }
         }
     }
