@@ -9,6 +9,8 @@ import com.adintech.shop.fragment.HomeFragment
 import com.adintech.shop.fragment.ProfileFragment
 import com.adintech.shop.fragment.WishlistFragment
 import com.fxn.OnBubbleClickListener
+import java.io.IOException
+import java.nio.charset.Charset
 
 /**
  * https://github.com/akshay2211/BubbleTabBar
@@ -49,7 +51,6 @@ class MainActivity : AppCompatActivity() {
                 }
             })
         )
-
 
         fragmentManager.beginTransaction().apply {
             add(R.id.container, mProfileFragment, "home").hide(mProfileFragment)

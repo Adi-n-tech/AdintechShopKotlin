@@ -1,47 +1,50 @@
 package com.adintech.shop.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.adintech.shop.model.category.pojo.Category
 import com.adintech.shop.R
+import com.adintech.shop.model.category.pojo.Category
+import com.squareup.picasso.Picasso
 
-class CategoriesAdapter(val categoriesList: ArrayList<Category>) :
-    RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
-
-    //this method is returning the view for each item in the list
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ViewHolder {
+class CategoriesAdapter(
+    private var context: Context,
+    private var categoryList: ArrayList<Category>
+) :
+    RecyclerView.Adapter<CategoriesAdapter.MyViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_categories_list, parent, false)
-        return ViewHolder(v)
+        return MyViewHolder(v)
     }
 
-    //this method is binding the data on the list
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(categoriesList[position])
-    }
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        // set the data in items
+        var person: Category = categoryList.get(position)
+        holder.name.text = person.name
 
-    //this method is giving the size of the list
-    override fun getItemCount(): Int {
-        return categoriesList.size
-    }
+        Picasso.get()
+            .load(person.icon)
+            .placeholder(R.drawable.no_image_icon)
+            .error(R.drawable.no_image_icon)
+            .into(holder.image)
 
-    //the class is hodling the list view
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        fun bindItems(categories_list: Category) {
-            val categoriesName = itemView.findViewById(R.id.categoriesName) as TextView
-            val categoriesIcon = itemView.findViewById(R.id.categoriesIcon) as ImageView
-            categoriesName.text = categories_list.name
-
-
+        // implement setOnClickListener event on item view.
+        holder.itemView.setOnClickListener { // display a toast with person name on item click
 
         }
+    }
+
+    override fun getItemCount(): Int {
+        return categoryList.size
+    }
+
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var name: TextView = itemView.findViewById<View>(R.id.categoriesName) as TextView
+        var image: ImageView = itemView.findViewById<View>(R.id.categoriesIcon) as ImageView
     }
 }

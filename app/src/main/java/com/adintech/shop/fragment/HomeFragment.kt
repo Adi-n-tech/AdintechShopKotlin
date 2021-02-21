@@ -26,7 +26,6 @@ class HomeFragment : Fragment(), APIResponseHandler {
 
     lateinit var mBinding: FragmentHomeBinding
     private lateinit var mViewModel: HomeViewModel
-
     var mCategoriesList = ArrayList<Category>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,11 +82,9 @@ class HomeFragment : Fragment(), APIResponseHandler {
         }
     }
 
+    //set adapter
     fun setAdaptor() {
-        //creating our adapter
-        val adapter = CategoriesAdapter(mCategoriesList)
-
-        //now adding the adapter to recyclerview
-        mBinding.recycleview.adapter = adapter
+        val customAdapter = CategoriesAdapter(requireContext(), mCategoriesList)
+        mBinding.recycleview.adapter = customAdapter
     }
 }
