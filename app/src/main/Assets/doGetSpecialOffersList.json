@@ -1,0 +1,88 @@
+{
+  "SpecialOffersList": [
+    {
+      "name": "Keyboard",
+      "description": "",
+      "discount_percentage": 30,
+      "actual_price": 500,
+      "discount_price": 35,
+      "rating": 4.0,
+      "delivery_charge": 40,
+      "icon": "https://cdn3.iconfinder.com/data/icons/ikooni-flat-devices-technologies/128/devices-18-512.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "PC's",
+      "description": "",
+      "discount_percentage": 15000,
+      "actual_price": 12000,
+      "delivery_charge": 40,
+      "rating": 4.0,
+      "discount_price": 20,
+      "icon": "https://i0.wp.com/freepngimg.com/download/computer/33011-1-gaming-computer-transparent-background.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Laptop Skin",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 200,
+      "discount_price": 180,
+      "delivery_charge": 40,
+      "rating": 4.0,
+      "icon": "https://www.printland.in/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/r/a/raj268_1.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Monitors",
+      "delivery_charge": 40,
+      "description": "",
+      "discount_percentage": 40,
+      "discount_price": 5000,
+      "actual_price": 4500,
+      "rating": 4.0,
+      "icon": "http://pngimg.com/uploads/monitor/laptop_PNG5875.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Mouse",
+      "description": "",
+      "discount_percentage": 10,
+      "actual_price": 300,
+      "rating": 4.0,
+      "delivery_charge": 40,
+      "discount_price": 275,
+      "icon": "https://www.freepngimg.com/thumb/computer%20mouse/36-pc-mouse-png-image.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Software",
+      "description": "",
+      "discount_percentage": 25,
+      "discount_price": 399,
+      "actual_price": 500,
+      "rating": 4.0,
+      "delivery_charge": 40,
+      "icon": "https://thedigitalcart.com/wp-content/uploads/2019/10/avg-internet-security-2016-digital-boxshot-download-1000x1400.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    }
+  ]
+}

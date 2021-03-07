@@ -1,16 +1,15 @@
-package com.adintech.shop
+package com.adintech.shop.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.adintech.shop.R
 import com.adintech.shop.databinding.ActivityMainBinding
 import com.adintech.shop.fragment.HomeFragment
 import com.adintech.shop.fragment.ProfileFragment
 import com.adintech.shop.fragment.WishlistFragment
 import com.fxn.OnBubbleClickListener
-import java.io.IOException
-import java.nio.charset.Charset
 
 /**
  * https://github.com/akshay2211/BubbleTabBar
@@ -34,19 +33,30 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+
         //on bottom navigation click
         mBinding.bubbleTabBar.addBubbleListener(
             (object : OnBubbleClickListener {
                 override fun onBubbleClick(id: Int) {
                     when (id) {
-                        R.id.home -> { fragmentManager.beginTransaction().hide(activeFragment).show(mHomeFragment).commit()
-                        activeFragment = mHomeFragment }
+                        R.id.home -> {
+                            fragmentManager.beginTransaction().hide(activeFragment).show(
+                                mHomeFragment
+                            ).commit()
+                            activeFragment = mHomeFragment
+                        }
                         R.id.wishlist -> {
-                            fragmentManager.beginTransaction().hide(activeFragment).show(mWishlistFragment).commit()
-                            activeFragment = mWishlistFragment }
+                            fragmentManager.beginTransaction().hide(activeFragment).show(
+                                mWishlistFragment
+                            ).commit()
+                            activeFragment = mWishlistFragment
+                        }
                         R.id.profile -> {
-                            fragmentManager.beginTransaction().hide(activeFragment).show(mProfileFragment).commit()
-                            activeFragment = mProfileFragment  }
+                            fragmentManager.beginTransaction().hide(activeFragment).show(
+                                mProfileFragment
+                            ).commit()
+                            activeFragment = mProfileFragment
+                        }
                     }
                 }
             })

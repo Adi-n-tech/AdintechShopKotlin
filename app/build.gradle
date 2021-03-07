@@ -52,7 +52,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
     //bottom navigation
-    implementation  'com.fxn769:bubbletabbar:1.0.6'
+    implementation 'com.fxn769:bubbletabbar:1.0.6'
 
     //slider banner
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
@@ -62,4 +62,11 @@ dependencies {
 
     //picasoo image loading
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Circle Imageview
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //image slider
+    implementation 'com.synnapps:carouselview:0.1.5'
+
 }

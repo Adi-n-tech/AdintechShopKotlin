@@ -1,40 +1,41 @@
-package com.adintech.shop.model.category.repository
+package com.adintech.shop.model.top_selling.repository
 
 import android.content.Context
-import com.adintech.shop.model.category.pojo.Category
+
+import com.adintech.shop.model.top_selling.pojo.TopSelling
 import com.adintech.shop.utils.APIResponseListener
 import com.practice.samplekotlinapp.utils.Utility
 import org.json.JSONException
 import org.json.JSONObject
 
-class HomeRepository {
+class TopSellingRepository {
 
-    fun doGetCategories(
+    fun doGetTopSelling(
         apiResponseListener: APIResponseListener,
         context: Context,
         requestID: Int
     ) {
 
-        val categoriesList = ArrayList<Category>()
+        val topSellingList = ArrayList<TopSelling>()
+
         try {
-            val obj = JSONObject(Utility.loadJSONFromAsset(context, "doGetCategoriesList.json"))
-            val userArray = obj.getJSONArray("categoriesList")
+            val obj = JSONObject(Utility.loadJSONFromAsset(context, "doGetTopSellingList.json"))
+            val userArray = obj.getJSONArray("ProductList")
             for (i in 0 until userArray.length()) {
                 val userDetail = userArray.getJSONObject(i)
                 /* personName.add(userDetail.getString("name"))
                  icon.add(userDetail.getString("icon"))*/
 
-                categoriesList.add(
-                    Category(
+                topSellingList.add(
+                    TopSelling(
                         userDetail.getString("name"),
                         userDetail.getString("icon"),
-                        userDetail.getString("img1"),
-                        userDetail.getString("img2"),
                         userDetail.getString("actual_price"),
                         userDetail.getString("discount_price"),
-                        userDetail.getString("description"),
-                        userDetail.getString("rating"),
-                        userDetail.getString("discount_percentage")
+                        userDetail.getString("save_price"),
+                        userDetail.getString("discount_percentage"),
+                        userDetail.getString("delivery_charge"),
+                        userDetail.getString("description")
                     )
                 )
             }
@@ -42,7 +43,7 @@ class HomeRepository {
             e.printStackTrace()
         }
 
-        return apiResponseListener.onSuccess(categoriesList, requestID)
+        return apiResponseListener.onSuccess(topSellingList, requestID)
 
     }
 }

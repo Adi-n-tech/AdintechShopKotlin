@@ -1,6 +1,7 @@
 package com.adintech.shop.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.adintech.shop.R
 import com.adintech.shop.model.category.pojo.Category
+import com.adintech.shop.utils.AppConstant
+import com.adintech.shop.views.DetailsProductActivity
 import com.squareup.picasso.Picasso
 
 class CategoriesAdapter(
@@ -34,7 +37,25 @@ class CategoriesAdapter(
             .into(holder.image)
 
         // implement setOnClickListener event on item view.
-        holder.itemView.setOnClickListener { // display a toast with person name on item click
+        holder.itemView.setOnClickListener {
+            val categoryList: Category = categoryList.get(position)
+            val intent = Intent(context, DetailsProductActivity::class.java)
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_NAME, categoryList.name)
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_ICON, categoryList.icon)
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_IMAGE1, categoryList.img1)
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_IMAGE2, categoryList.img2)
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_DESCRIPTION, categoryList.description)
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_ACTUAL_PRICE, categoryList.actual_price)
+            intent.putExtra(
+                AppConstant.INTENT_KEYS.PRODUCT_DISCOUNT_PRICE,
+                categoryList.discount_price
+            )
+            intent.putExtra(
+                AppConstant.INTENT_KEYS.PRODUCT_DISCOUNT_PERCENTAGE,
+                categoryList.discount_percentage
+            )
+            intent.putExtra(AppConstant.INTENT_KEYS.PRODUCT_RATING, categoryList.rating)
+            context.startActivity(intent)
 
         }
     }

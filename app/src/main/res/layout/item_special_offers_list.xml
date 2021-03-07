@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F3F1F1"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_discount_per" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/discount_per"
+            android:gravity="center"
+            android:text="15% \n OFF"
+            android:textColor="@color/white"
+            android:textSize="6dp" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/specialOfferIcon"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:src="@drawable/no_image_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 2,499 "
+            android:id="@+id/discount_price"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 4,999 "
+            android:layout_marginLeft="10dp"
+            android:id="@+id/actual_price"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/specialOfferName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        tools:text="Title" />
+
+</LinearLayout>

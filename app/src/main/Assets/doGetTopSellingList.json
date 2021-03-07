@@ -1,0 +1,79 @@
+{
+  "ProductList": [
+    {
+      "name": "Boult Audio ProBass Curve In-Ear Bluetooth Handset (Black) Boult Audio ProBass Curve In-Ear Bluetooth Handset (Black)",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "delivery_charge": 40,
+      "rating": 4.0,
+      "icon": "https://www.pngkey.com/png/full/779-7797000_as-the-earphones-are-compatible-with-laptops-mobiles.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Monitor",
+      "description": "",
+      "discount_percentage": 30,
+      "delivery_charge": 40,
+      "actual_price": 5599.00,
+      "save_price": 1000.00,
+      "discount_price": 4599.00,
+      "rating": 3.5,
+      "icon": "http://pngimg.com/uploads/monitor/laptop_PNG5875.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Mouse",
+      "description": "",
+      "discount_percentage": 60,
+      "actual_price": 299.00,
+      "discount_price": 199.00,
+      "rating": 4.4,
+      "delivery_charge": 40,
+      "save_price": 100,
+      "icon": "https://www.freepngimg.com/thumb/computer%20mouse/36-pc-mouse-png-image.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "PC",
+      "description": "",
+      "delivery_charge": 40,
+      "discount_percentage": 50,
+      "actual_price": 17000.00,
+      "discount_price": 12000.00,
+      "save_price": 5000.00,
+      "rating": 3.9,
+      "icon": "https://i0.wp.com/freepngimg.com/download/computer/33011-1-gaming-computer-transparent-background.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    },
+    {
+      "name": "Computer",
+      "description": "",
+      "discount_percentage": 25,
+      "actual_price": 25000.00,
+      "delivery_charge": 40,
+      "discount_price": 21000.00,
+      "save_price": 4000.00,
+      "rating": 5.0,
+      "icon": "https://pngimg.com/uploads/computer_pc/computer_pc_PNG7719.png",
+      "images": [
+        "https://img.naidunia.com/naidunia/flipkart_sale_30_09_2019.jpg",
+        "https://static.toiimg.com/thumb/msid-71832173,width-1200,height-900,resizemode-4/.jpg"
+      ]
+    }
+  ]
+}

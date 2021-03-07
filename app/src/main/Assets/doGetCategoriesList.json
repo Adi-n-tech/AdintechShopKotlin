@@ -2,22 +2,63 @@
   "categoriesList": [
     {
       "name": "Computer",
-      "icon": "https://images.indianexpress.com/2018/10/6_759-11.jpg"
-    },    {
-      "name": "Computer",
-      "icon": "https://images.indianexpress.com/2018/10/6_759-11.jpg"
-    },    {
-      "name": "Computer",
-      "icon": "https://images.indianexpress.com/2018/10/6_759-11.jpg"
-    },    {
-      "name": "Computer",
-      "icon": "https://images.indianexpress.com/2018/10/6_759-11.jpg"
-    },    {
-      "name": "Computer",
-      "icon": "https://images.indianexpress.com/2018/10/6_759-11.jpg"
-    },    {
-      "name": "Computer",
-      "icon": "https://images.indianexpress.com/2018/10/6_759-11.jpg"
+      "icon": "https://icons.iconarchive.com/icons/jommans/emluator/256/My-Computer-icon.png",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "rating": 4.0
+    },
+    {
+      "name": "Laptop",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "rating": 4.0,
+      "icon": "https://freepikpsd.com/wp-content/uploads/2020/01/laptop-icon-png-images.png"
+    },
+    {
+      "name": "Antivirus",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "rating": 4.0,
+      "icon": "https://www.freeiconspng.com/thumbs/antivirus-icon/utilities-antivirus-icon-3.png"
+    },
+    {
+      "name": "Ram",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "rating": 4.0,
+      "icon": "https://cdn1.iconfinder.com/data/icons/computer-hardware-flat-color-0619/64/ram-memory-chip-hardware-microchip-512.png"
+    },
+    {
+      "name": "Monitors",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "rating": 4.0,
+      "icon": "https://image.flaticon.com/icons/png/128/3159/3159543.png"
+    },
+    {
+      "name": "Motherboard / Processor",
+      "description": "",
+      "discount_percentage": 15,
+      "actual_price": 2999.00,
+      "discount_price": 2599.00,
+      "save_price": 400.00,
+      "rating": 4.0,
+      "icon": "https://cdn.iconscout.com/icon/premium/png-256-thumb/motherboard-2212761-1849018.png"
     }
   ]
 }
